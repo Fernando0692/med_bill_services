@@ -1,8 +1,32 @@
 <?php
 
-$lang['required']			= "The %s field is required.";
+$lang['required']			= "<script>Materialize.toast('This %s field is required', 4000);</script>";
+// $lang['isset']				= "<script>Materialize.toast('The %s field must have a value', 4000);</script>";
+// $lang['valid_email']		= "<script>Materialize.toast('The %s field must contain a valid email address', 4000);</script>";
+// $lang['valid_emails']		= "<script>Materialize.toast('The %s field must contain all valid email addresses', 4000);</script>";
+// $lang['valid_url']			= "<script>Materialize.toast('The %s field must contain a valid URL', 4000);</script>";
+// $lang['valid_ip']			= "<script>Materialize.toast('The %s field must contain a valid IP', 4000);</script>";
+// $lang['min_length']			= "<script>Materialize.toast('The %s field must be at least %s characters in length', 4000);</script>";
+// $lang['max_length']			= "<script>Materialize.toast('The %s field can not exceed %s characters in length', 4000);</script>";
+// $lang['exact_length']		= "<script>Materialize.toast('The %s field must be exactly %s characters in length', 4000);</script>";
+// $lang['alpha']				= "<script>Materialize.toast('The %s field may only contain alphabetical characters', 4000);</script>";
+// $lang['alpha_numeric']		= "<script>Materialize.toast('The %s field may only contain alpha-numeric characters', 4000);</script>";
+// $lang['alpha_dash']			= "<script>Materialize.toast('The %s field may only contain alpha-numeric characters, underscores, and dashes', 4000);</script>";
+// $lang['numeric']			= "<script>Materialize.toast('The %s field must contain only numbers', 4000);</script>";
+// $lang['is_numeric']			= "<script>Materialize.toast('The %s field must contain only numeric characters', 4000);</script>";
+// $lang['integer']			= "<script>Materialize.toast('The %s field must contain an integer', 4000);</script>";
+// $lang['regex_match']		= "<script>Materialize.toast('The %s field is not in the correct format', 4000);</script>";
+// $lang['matches']			= "<script>Materialize.toast('The %s field does not match the %s field', 4000);</script>";
+// $lang['is_unique'] 			= "<script>Materialize.toast('The %s field must contain a unique value', 4000);</script>";
+// $lang['is_natural']			= "<script>Materialize.toast('The %s field must contain only positive numbers', 4000);</script>";
+// $lang['is_natural_no_zero']	= "<script>Materialize.toast('The %s field must contain a number greater than zero', 4000);</script>";
+// $lang['decimal']			= "<script>Materialize.toast('The %s field must contain a decimal number', 4000);</script>";
+// $lang['less_than']			= "<script>Materialize.toast('The %s field must contain a number less than %s', 4000);</script>";
+// $lang['greater_than']		= "<script>Materialize.toast('The %s field must contain a number greater than %s', 4000);</script>";
+
+// $lang['required']			= "The %s field is required.";
 $lang['isset']				= "The %s field must have a value.";
-$lang['valid_email']		= "The %s field must contain a valid email address.";
+$lang['valid_email']		= "<script>Materialize.toast('The %s field must contain a valid email address.');</script>";
 $lang['valid_emails']		= "The %s field must contain all valid email addresses.";
 $lang['valid_url']			= "The %s field must contain a valid URL.";
 $lang['valid_ip']			= "The %s field must contain a valid IP.";
@@ -23,6 +47,7 @@ $lang['is_natural_no_zero']	= "The %s field must contain a number greater than z
 $lang['decimal']			= "The %s field must contain a decimal number.";
 $lang['less_than']			= "The %s field must contain a number less than %s.";
 $lang['greater_than']		= "The %s field must contain a number greater than %s.";
+
 
 
 /* End of file form_validation_lang.php */
