@@ -21,7 +21,7 @@
 		<div class="collapse navbar-collapse" id="navbar1">
 			<ul class="nav navbar-nav navbar-right">
 				<?php if ($this->session->userdata('login')){ ?>
-				<li><p class="navbar-text">Hello <?php echo $this->session->userdata('uname'); ?></p></li>
+				<li><p class="navbar-text">Hello <?php echo $this->session->userdata('username'); ?></p></li>
 				<li><a href="<?php echo base_url(); ?>home/logout">Log Out</a></li>
 				<?php } else { ?>
 				<li><a href="<?php echo base_url(); ?>login">Login</a></li>
@@ -36,8 +36,8 @@
 		<div class="col-md-4">
 			<h4>Profile Summary</h4>
 			<hr/>
-			<p>Name: <?php echo $uname; ?></p>
-			<p>Email: <?php echo $uemail; ?></p>
+			<p>Name: <?php echo $username; ?></p>
+			<p>Email: <?php echo $email; ?></p>
 			<p>...</p>
 		</div>
 		<div class="col-md-8">

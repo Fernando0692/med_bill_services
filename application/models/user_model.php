@@ -6,23 +6,23 @@ class user_model extends CI_Model
     {
         parent::__construct();
     }
-	
-	function get_user($email, $pwd)
+
+	function get_user($username, $pwd)
 	{
-		$this->db->where('email', $email);
-		$this->db->where('password', md5($pwd));
+		$this->db->where('username', $username);
+		$this->db->where('password', $pwd);
         $query = $this->db->get('user');
 		return $query->result();
 	}
-	
+
 	// get user
 	function get_user_by_id($id)
 	{
-		$this->db->where('id', $id);
+		$this->db->where('id_user', $id);
         $query = $this->db->get('user');
 		return $query->result();
 	}
-	
+
 	// insert
 	function insert_user($data)
     {

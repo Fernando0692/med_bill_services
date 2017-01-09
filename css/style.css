@@ -9,6 +9,12 @@
 .icon-block {
   padding: 0 15px;
 }
+
 .icon-block .material-icons {
 	font-size: inherit;
+}
+
+.img-circle-size {
+    width: 50%;
+    height: 50%;
 }

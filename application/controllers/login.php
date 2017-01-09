@@ -13,19 +13,19 @@ class login extends CI_Controller
 	}
     public function index()
     {
-		if ($this->session->userdata('uid'))
+		if ($this->session->userdata('id_user'))
 		{
-			$data['user'] = $this->user_model->get_user_by_id($this->session->userdata('uid'));
-			redirect("profile");
+			$data['user'] = $this->user_model->get_user_by_id($this->session->userdata('id_user'));
+			redirect('home');
 		}
 		else
 		{
 			// get form input
-			$email = $this->input->post("email");
+			$username = $this->input->post("username");
 			$password = $this->input->post("password");
 
 			// form validation
-			$this->form_validation->set_rules("email", "Email-ID", "trim|required|xss_clean");
+			$this->form_validation->set_rules("username", "Username", "trim|required|xss_clean");
 			$this->form_validation->set_rules("password", "Password", "trim|required|xss_clean");
 
 			if ($this->form_validation->run() == FALSE)
@@ -36,18 +36,23 @@ class login extends CI_Controller
 			else
 			{
 				// check for user credentials
-				$uresult = $this->user_model->get_user($email, $password);
+				$uresult = $this->user_model->get_user($username, $password);
 				if (count($uresult) > 0)
 				{
 					// set session
 					$sess_data = array(
-						'login' => TRUE,
-						'uname' => $uresult[0]->fname,
-						'uid' => $uresult[0]->id
+						'login' 	=> TRUE,
+						'id_user'	=> $uresult[0]->id_user,
+						'fname' 	=> $uresult[0]->fname,
+						'lname'		=> $uresult[0]->lname,
+						'username'	=> $uresult[0]->username,
+						'password'	=> $uresult[0]->password,
+						'email'		=> $uresult[0]->email,
+						'profile'	=> $uresult[0]->profile,
 					);
 					$this->session->set_userdata($sess_data);
-					$data['user'] = $this->user_model->get_user_by_id($this->session->userdata('uid'));
-					redirect("profile");
+					$data['user'] = $this->user_model->get_user_by_id($this->session->userdata('id_user'));
+					redirect('home');
 				}
 				else
 				{

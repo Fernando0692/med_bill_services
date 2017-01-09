@@ -1,6 +1,5 @@
 RewriteEngine On
-RewriteBase /med_bill_services/
-RewriteRule ^(system|cgi-bin) - [F,L]
+RewriteBase /med_bill_services
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule .* index.php?$1 [PT,L]
+RewriteRule ^(.*)\?*$ index.php/$1 [L,QSA]

@@ -6010,6 +6010,7 @@ textarea.materialize-textarea + label:after {
 }
 
 .input-field label.active {
+  color: #26A69A;
   font-size: 0.8rem;
   -webkit-transform: translateY(-140%);
           transform: translateY(-140%);

@@ -9,43 +9,57 @@ class signup extends CI_Controller
 		$this->load->database();
 		$this->load->model('user_model');
 	}
-	
+
 	function index()
 	{
-		// set form validation rules
-		$this->form_validation->set_rules('fname', 'First Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
-		$this->form_validation->set_rules('lname', 'Last Name', 'trim|required|alpha|min_length[3]|max_length[30]|xss_clean');
-		$this->form_validation->set_rules('email', 'Email ID', 'trim|required|valid_email|is_unique[user.email]');
-		$this->form_validation->set_rules('password', 'Password', 'trim|required|matches[cpassword]|md5');
-		$this->form_validation->set_rules('cpassword', 'Confirm Password', 'trim|required');
-		
-		// submit
-		if ($this->form_validation->run() == FALSE)
-        {
-			// fails
-			$this->load->view('signup_view');
-        }
-		else
+		if ($this->session->userdata('id_user'))
 		{
-			//insert user details into db
-			$data = array(
-				'fname' => $this->input->post('fname'),
-				'lname' => $this->input->post('lname'),
-				'email' => $this->input->post('email'),
-				'password' => $this->input->post('password')
-			);
-			
-			if ($this->user_model->insert_user($data))
+			// set form validation rules
+			$this->form_validation->set_rules('fname', 'First Name', 'trim|required|min_length[3]|max_length[30]|xss_clean');
+			$this->form_validation->set_rules('lname', 'Last Name', 'trim|min_length[3]|max_length[30]|xss_clean');
+			$this->form_validation->set_rules('email', 'Email', 'trim|valid_email');
+			$this->form_validation->set_rules('profile', 'Profile', 'trim|required|xss_clean');
+			$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|is_unique[user.username]');
+			$this->form_validation->set_rules('password', 'Password', 'trim|required|matches[cpassword]');
+			$this->form_validation->set_rules('cpassword', 'Confirm Password', 'trim|required');
+
+			// submit
+			if ($this->form_validation->run() == FALSE)
 			{
-				$this->session->set_flashdata('msg','<div class="alert alert-success text-center">You are Successfully Registered! Please login to access your Profile!</div>');
-				redirect('signup/index');
+				// fails
+				// $this->load->view('signup_view');
+				$this->load->view('signup_view');
 			}
 			else
 			{
-				// error
-				$this->session->set_flashdata('msg','<div class="alert alert-danger text-center">Oops! Error.  Please try again later!!!</div>');
-				redirect('signup/index');
+				//insert user details into db
+				$data = array(
+					'fname' => $this->input->post('fname'),
+					'lname' => $this->input->post('lname'),
+					'email' => $this->input->post('email'),
+					'profile' => $this->input->post('profile'),
+					'username' => $this->input->post('username'),
+					'password' => $this->input->post('password')
+				);
+
+				if ($this->user_model->insert_user($data))
+				{
+					$this->session->set_flashdata('msg','<script>Materialize.toast("You are Successfully Registered! Please login to access your Profile!", 5000);</script>');
+					redirect('signup');
+				}
+				else
+				{
+					// error
+					$this->session->set_flashdata('msg','<script>Materialize.toast("Oops! Error.  Please try again later!!!", 5000);</script>');
+					redirect('signup');
+				}
 			}
+		}
+		else
+		{
+			$data['user'] = $this->user_model->get_user_by_id($this->session->userdata('id_user'));
+			redirect('home');
+
 		}
 	}
 }
