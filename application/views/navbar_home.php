@@ -5,7 +5,7 @@
                     <div class="background blue">
                         <!-- <img src="<?php echo base_url();?>/img/example001.jpg"> -->
                     </div>
-                    <a href="#!user"><img class="circle" src="<?php echo base_url();?>/img/Fernando.png"></a>
+                    <a href="#!user"><img class="circle" src="<?php echo base_url().'img/';?>Fernando.png"></a>
                     <a href="#!name"><span class="name"><?php echo $this->session->userdata('fname').' '.$this->session->userdata('lname'); ?></span></a>
                     <a href="#!email"><span class="email"><?php echo $this->session->userdata('email'); ?></span></a>
                 </div>
@@ -16,8 +16,16 @@
                         <a class="collapsible-header waves-effect waves-red"><i class="material-icons">account_box</i>Accounts</a>
                         <div class="collapsible-body">
                             <ul>
+                                <?php
+                                if($this->session->userdata('profile')=='Administrator')
+                                {
+                                ?>
+                                <li><a href="<?php echo base_url('user')?>" class="waves-effect">User</a></li>
+                                <?php
+                                }
+                                ?>
                                 <li><a href="#!" class="waves-effect">Client</a></li>
-                                <li><a href="#!" class="waves-effect">Patient</a></li>
+                                <li><a href="<?php echo base_url('patient'); ?>" class="waves-effect">Patient</a></li>
                                 <li><a href="#!" class="waves-effect">Provider</a></li>
                             </ul>
                         </div>
@@ -31,7 +39,7 @@
                         <div class="collapsible-body">
                             <ul>
                                 <?php
-                                if($this->session->userdata('profile')=='Medical')
+                                if($this->session->userdata('profile')=='Medical' || $this->session->userdata('profile')=='Administrator')
                                 {
                                 ?>
                                 <li><a href="#!" class="waves-effect">HCFA-1500</a></li>
@@ -39,7 +47,7 @@
                                 }
                                 ?>
                                 <?php
-                                if($this->session->userdata('profile')=='Dentist')
+                                if($this->session->userdata('profile')=='Dentist' || $this->session->userdata('profile')=='Administrator')
                                 {
                                 ?>
                                 <li><a href="#!" class="waves-effect">WADA-1500</a></li>
