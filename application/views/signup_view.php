@@ -79,7 +79,7 @@ $this->load->view('navbar_home');
 				</div>
 			</div>
 			<div class="row margin right" style="padding: 0.5rem">
-				<button type="button" name="cancel" class="btn waves-effect waves-light red">Cancel</button>
+				<a type="button" name="cancel" class="btn waves-effect waves-light red" href="<? echo base_url('user'); ?>">Cancel</a>
 				<button type="submit" name="create" class="btn waves-effect waves-light blue">Create</button>
 			</div>
 			<?php

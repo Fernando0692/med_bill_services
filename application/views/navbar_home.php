@@ -105,7 +105,7 @@
                                 <?php
                                 }
                                 ?>
-                                <li><a href="#!" class="waves-effect">About Us</a></li>
+                                <li><a href="<?php echo base_url('aboutUs'); ?>" class="waves-effect">About Us</a></li>
                             </ul>
                         </div>
                     </li>

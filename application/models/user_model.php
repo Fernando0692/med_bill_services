@@ -1,4 +1,5 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class user_model extends CI_Model
 {
@@ -28,4 +29,15 @@ class user_model extends CI_Model
     {
 		return $this->db->insert('user', $data);
 	}
-}?>
+
+	function get_user_info()
+	{
+		$this->db->select('*');
+		$query = $this->db->get('user');
+
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		}
+	}
+}
+?>
