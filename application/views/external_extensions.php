@@ -7,4 +7,5 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="<?php echo base_url(); ?>js/materialize.js"></script>
 <script src="<?php echo base_url(); ?>js/init.js"></script>
-<script src="<?php echo base_url(); ?>js/signup.js"></script>
+<script src="<?php echo base_url(); ?>js/materialize_components.js"></script>
+<script src="<?php echo base_url(); ?>js/jquery.maskedinput.js"></script>

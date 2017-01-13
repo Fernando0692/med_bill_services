@@ -47,7 +47,7 @@ $this->load->view('navbar_home');
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($result as $r): ?>
+                <?php foreach($result as $r): ?>
                     <tr class='dropdown-button' data-activates="options">
                         <td><?php echo $r->id_user; ?></td>
                         <td><?php echo $r->fname; ?></td>
@@ -55,8 +55,8 @@ $this->load->view('navbar_home');
                         <td><?php echo $r->email; ?></td>
                         <td><?php echo $r->profile; ?></td>
                         <td><?php echo $r->username; ?></td>
-                    <?php endforeach; ?>
                     </tr>
+                <?php endforeach; ?>
                 </tbody>
             </table>
 		</div>

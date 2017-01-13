@@ -7,7 +7,7 @@ class patient extends CI_Controller
 		$this->load->helper(array('form','url','html'));
 		$this->load->library(array('session', 'form_validation'));
 		$this->load->database();
-		$this->load->model('user_model');
+		$this->load->model('patient_model');
 	}
 
 	function index()
@@ -18,6 +18,47 @@ class patient extends CI_Controller
 	function patient_create()
 	{
 		$this->load->view('accounts/patient/patient_create');
+	}
 
+	function patient_insert()
+	{
+		$this->form_validation->set_rules('fname', 'First Name', 'trim|required|min_length[3]|max_length[30]|xss_clean');
+		$this->form_validation->set_rules('mname', 'Middle Name', 'trim|min_length[3]|max_length[30]|xss_clean');
+		$this->form_validation->set_rules('lname', 'Last Name', 'trim|required|min_length[3]|max_length[30]|xss_clean');
+		$this->form_validation->set_rules('bdate', 'Bird Date', 'trim|required|min_length[3]|max_length[30]|xss_clean');
+		$this->form_validation->set_rules('sex', 'Sex', 'trim|required|min_length[3]|max_length[30]|xss_clean');
+		$this->form_validation->set_rules('marital_status', 'Marital Status', 'trim|min_length[3]|max_length[30]|xss_clean');
+		$this->form_validation->set_rules('phone', 'Phone', 'trim|min_length[3]|max_length[10]|xss_clean');
+		$this->form_validation->set_rules('street', 'Street', 'trim|required|min_length[3]|max_length[10]|xss_clean');
+		$this->form_validation->set_rules('city', 'City', 'trim|required|min_length[3]|max_length[10]|xss_clean');
+		$this->form_validation->set_rules('state', 'State', 'trim|required|min_length[3]|max_length[10]|xss_clean');
+		$this->form_validation->set_rules('zip_code', 'Zip Code', 'trim|required|min_length[3]|max_length[10]|xss_clean');
+		$this->form_validation->set_rules('laboral_status', 'Laboral Status', 'trim|min_length[3]|max_length[10]|xss_clean');
+		$this->form_validation->set_rules('related_insured', 'Related to Insured', 'trim|min_length[3]|max_length[10]|xss_clean');
+		$this->form_validation->set_rules('insured_ssn', 'Insured S.S.N.', 'trim|min_length[3]|max_length[10]|xss_clean');
+
+		if ($this->form_validation->run() == FALSE)
+		{
+			$this->load->view('accounts/patient/patient_create');
+		}
+		else
+		{
+			$data = array(
+				'fname'	=> $this->input->post('fname'),
+				'mname'	=> $this->input->post('mname'),
+				'lname'	=> $this->input->post('lname'),
+			);
+			if ($this->patient_model->insert_patient($data))
+			{
+				$this->session->set_flashdata('msg','<script>Materialize.toast("You are Successfully Registered! Please login to access your Profile!", 5000);</script>');
+				redirect('patient/patient_create');
+			}
+			else
+			{
+				// error
+				$this->session->set_flashdata('msg','<script>Materialize.toast("Oops! Error.  Please try again later!!!", 5000);</script>');
+				redirect('patient/patient_create');
+			}
+		}
 	}
 }
