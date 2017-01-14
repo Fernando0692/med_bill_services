@@ -12,7 +12,8 @@ class patient extends CI_Controller
 
 	function index()
 	{
-        $this->load->view('accounts/patient/patient_panel');
+		$data['result'] = $this->patient_model->get_patient_info();
+        $this->load->view('accounts/patient/patient_panel',$data);
 	}
 
 	function patient_create()
@@ -29,13 +30,13 @@ class patient extends CI_Controller
 		$this->form_validation->set_rules('sex', 'Sex', 'trim|required|min_length[3]|max_length[30]|xss_clean');
 		$this->form_validation->set_rules('marital_status', 'Marital Status', 'trim|min_length[3]|max_length[30]|xss_clean');
 		$this->form_validation->set_rules('phone', 'Phone', 'trim|min_length[3]|max_length[10]|xss_clean');
-		$this->form_validation->set_rules('street', 'Street', 'trim|required|min_length[3]|max_length[10]|xss_clean');
-		$this->form_validation->set_rules('city', 'City', 'trim|required|min_length[3]|max_length[10]|xss_clean');
-		$this->form_validation->set_rules('state', 'State', 'trim|required|min_length[3]|max_length[10]|xss_clean');
-		$this->form_validation->set_rules('zip_code', 'Zip Code', 'trim|required|min_length[3]|max_length[10]|xss_clean');
-		$this->form_validation->set_rules('laboral_status', 'Laboral Status', 'trim|min_length[3]|max_length[10]|xss_clean');
-		$this->form_validation->set_rules('related_insured', 'Related to Insured', 'trim|min_length[3]|max_length[10]|xss_clean');
-		$this->form_validation->set_rules('insured_ssn', 'Insured S.S.N.', 'trim|min_length[3]|max_length[10]|xss_clean');
+		$this->form_validation->set_rules('street', 'Street', 'trim|required|min_length[3]|max_length[30]|xss_clean');
+		$this->form_validation->set_rules('city', 'City', 'trim|required|min_length[3]|max_length[30]|xss_clean');
+		$this->form_validation->set_rules('state', 'State', 'trim|required|xss_clean');
+		$this->form_validation->set_rules('zip_code', 'Zip Code', 'trim|required|min_length[3]|max_length[30]|xss_clean');
+		$this->form_validation->set_rules('laboral_status', 'Laboral Status', 'trim|xss_clean');
+		$this->form_validation->set_rules('related_insured', 'Related to Insured', 'trim|xss_clean');
+		$this->form_validation->set_rules('insured_ssn', 'Insured S.S.N.', 'trim|min_length[3]|max_length[30]|xss_clean');
 
 		if ($this->form_validation->run() == FALSE)
 		{
@@ -46,6 +47,18 @@ class patient extends CI_Controller
 			$data = array(
 				'fname'	=> $this->input->post('fname'),
 				'mname'	=> $this->input->post('mname'),
+				'lname'	=> $this->input->post('lname'),
+				'bdate'	=> $this->input->post('bdate'),
+				'sex'	=> $this->input->post('sex'),
+				'marital_status'=> $this->input->post('marital_status'),
+				'phone'=> $this->input->post('phone'),
+				'street'=> $this->input->post('street'),
+				'city'	=> $this->input->post('city'),
+				'state'	=> $this->input->post('state'),
+				'zip_code'		=> $this->input->post('zip_code'),
+				'laboral_status'=> $this->input->post('laboral_status'),
+				'related_insured'	=> $this->input->post('related_insured'),
+				'insured_ssn'	=> $this->input->post('insured_ssn'),
 				'lname'	=> $this->input->post('lname'),
 			);
 			if ($this->patient_model->insert_patient($data))

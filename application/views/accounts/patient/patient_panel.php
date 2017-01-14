@@ -18,54 +18,45 @@ $this->load->view('navbar_home');
 <div class="container" style="padding-top: 2rem">
 	<div class="row margin">
 		<div class="col s12 offset-s0 m12 offset-m0 card-panel">
-            HOLA MAMA!!
+            FILTERS
 		</div>
 	</div>
 	<div class="row margin">
         <a type="button" class="btn right waves-effect waves-light" href="<?php echo base_url('patient/patient_create'); ?>">
             <i class="large material-icons">add</i>
         </a>
-        <a type="button" class="btn right waves-effect waves-light" style="margin-right: 1rem" href="<?php echo base_url('print'); ?>">
+        <a type="button" class="btn right waves-effect waves-light" style="margin-right: 1rem" href="#print">
             <i class="large material-icons">print</i>
         </a>
 		<div class="col s12 offset-s0 m12 offset-m0 card-panel">
             <table class="highlight responsive-table">
                 <ul id='options' class='dropdown-content' style="width:0.5rem">
-                    <li><a href="#!">open</a></li>
-                    <li><a href="#!">edit</a></li>
+                    <li><a href="#!">Open</a></li>
+                    <li><a href="#!">Edit</a></li>
                     <li class="divider"></li>
-                    <li><a href="#!">delete</a></li>
+                    <li><a href="#!">Delete</a></li>
                 </ul>
                 <thead>
                     <tr>
                         <th data-field="id">Id</th>
                         <th data-field="fname">Name(s)</th>
-                        <th data-field="mname">Middle name</th>
                         <th data-field="lname">Last name</th>
-                        <th data-field="price">Item Price</th>
-                        <th data-field="price">Item Price</th>
-                        <th data-field="price">Item Price</th>
-                        <th data-field="price">Item Price</th>
-                        <th data-field="price">Item Price</th>
-                        <th data-field="price">Item Price</th>
+                        <th data-field="laboral_status">Laboral Status</th>
+                        <th data-field="related_insured">Related to Insured</th>
+                        <th data-field="insured_ssn">Insured's S.S.N.</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class='dropdown-button' data-activates="options">
-                        <td>Alvin</td>
-                        <td>Eclair</td>
-                        <td>$0.87</td>
-                    </tr>
-                    <tr>
-                        <td>Alan</td>
-                        <td>Jellybean</td>
-                        <td>$3.76</td>
-                    </tr>
-                    <tr>
-                        <td>Jonathan</td>
-                        <td>Lollipop</td>
-                        <td>$7.00</td>
-                    </tr>
+                    <?php foreach($result as $r): ?>
+                        <tr class='dropdown-button' data-activates="options">
+                            <td><?php echo $r->id_patient; ?></td>
+                            <td><?php echo $r->fname; ?></td>
+                            <td><?php echo $r->lname; ?></td>
+                            <td><?php echo $r->laboral_status; ?></td>
+                            <td><?php echo $r->related_insured; ?></td>
+                            <td><?php echo $r->insured_ssn; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
 		</div>

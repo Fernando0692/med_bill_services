@@ -180,8 +180,8 @@ $this->load->view('navbar_home');
                 </div>
             </div>
 			<div class="row margin right" style="padding: 0.5rem">
-				<button type="button" class="btn waves-effect waves-light red">Cancel</button>
-				<button type="submit" class="btn waves-effect waves-light blue">Create</button>
+                <a type="button" name="cancel" class="btn waves-effect waves-light red" href="<? echo base_url('patient'); ?>">Cancel</a>
+				<button type="submit" name="create" class="btn waves-effect waves-light blue">Create</button>
 			</div>
 			<?php
 			echo form_close();

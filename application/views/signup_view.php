@@ -28,11 +28,8 @@ $this->load->view('navbar_home');
                 <div class="input-field col s6 offset-s4">
                     <div class="file-field input-field">
                         <div class="btn">
-                            <span>File</span>
-                            <input type="file">
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input name="img" class="file-path validate" type="text">
+                            <span>Photo</span>
+                            <input type="file" name="profile_img">
                         </div>
                     </div>
                 </div>

@@ -18,14 +18,14 @@ $this->load->view('navbar_home');
 <div class="container" style="padding-top: 2rem">
 	<div class="row margin">
 		<div class="col s12 offset-s0 m12 offset-m0 card-panel">
-            DIV TO FILTERS
+            FILTERS
 		</div>
 	</div>
 	<div class="row margin">
         <a type="button" class="btn right waves-effect waves-light" href="<?php echo base_url('signup'); ?>">
             <i class="large material-icons">add</i>
         </a>
-        <a type="button" class="btn right waves-effect waves-light" style="margin-right: 1rem" href="<?php echo base_url('print'); ?>">
+        <a type="button" class="btn right waves-effect waves-light" style="margin-right: 1rem" href="#print">
             <i class="large material-icons">print</i>
         </a>
 		<div class="col s12 offset-s0 m12 offset-m0 card-panel">

@@ -5,7 +5,7 @@
                     <div class="background blue">
                         <!-- <img src="<?php echo base_url();?>/img/example001.jpg"> -->
                     </div>
-                    <a href="#!user"><img class="circle" src="<?php echo base_url().'img/';?>Fernando.png"></a>
+                    <!-- <a href="#!user"><img class="circle" src="<?php echo base_url().'img/';?>Fernando.png"></a> -->
                     <a href="#!name"><span class="name"><?php echo $this->session->userdata('fname').' '.$this->session->userdata('lname'); ?></span></a>
                     <a href="#!email"><span class="email"><?php echo $this->session->userdata('email'); ?></span></a>
                 </div>
