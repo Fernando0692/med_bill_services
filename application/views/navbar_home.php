@@ -24,8 +24,8 @@
                         <?php
                         }
                         ?>
-                        <li><a href="#!" class="waves-effect">Client</a></li>
-                        <li><a href="<?php echo base_url('patient'); ?>" class="waves-effect">Patient</a></li>
+                        <li><a href="<?= base_url('client')?>" class="waves-effect">Client</a></li>
+                        <li><a href="<?= base_url('patient'); ?>" class="waves-effect">Patient</a></li>
                         <li><a href="#!" class="waves-effect">Provider</a></li>
                     </ul>
                 </div>
