@@ -12,8 +12,8 @@ class provider extends CI_Controller
 
 	function index()
 	{
-		// $data['result'] = $this->provider_model->get_provider_info();
-        $this->load->view('accounts/provider/provider_panel');
+		$data['result'] = $this->provider_model->get_provider_info();
+        $this->load->view('accounts/provider/provider_panel', $data);
 	}
 
 	function provider_create()

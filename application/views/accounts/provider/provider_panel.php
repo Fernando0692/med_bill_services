@@ -45,14 +45,14 @@ $this->load->view('navbar_home');
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <?php foreach($result as $r): ?>
+                    <?php foreach($result as $r): ?>
                         <tr class='dropdown-button' data-activates="options">
                             <td><?php echo $r->id_provider; ?></td>
                             <td><?php echo $r->fname; ?></td>
                             <td><?php echo $r->lname; ?></td>
                             <td><?php echo $r->specialty; ?></td>
                         </tr>
-                    <?php endforeach; ?> -->
+                    <?php endforeach; ?>
                 </tbody>
             </table>
 		</div>
