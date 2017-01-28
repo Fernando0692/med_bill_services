@@ -152,10 +152,10 @@ $this->load->view('navbar_home');
                 </div>
                 <div class="switch col s3">
                     <label>
-                        SSN
+                        Tax ID
                         <input type="checkbox">
                         <span class="lever"></span>
-                        Tax ID
+                        SSN
                     </label>
                 </div>
             </div>
