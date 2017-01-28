@@ -39,7 +39,7 @@
                 <div class="collapsible-body">
                     <ul>
                         <li><a href="<?= base_url('insured'); ?>" class="waves-effect">Insured</a></li>
-                        <li><a href="#!" class="waves-effect">Insurance</a></li>
+                        <li><a href="<?= base_url('insurance'); ?>" class="waves-effect">Insurance</a></li>
                     </ul>
                 </div>
             </li>

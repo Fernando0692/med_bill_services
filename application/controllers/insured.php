@@ -49,7 +49,7 @@ class insured extends CI_Controller
 
 			if ($this->form_validation->run() == FALSE)
 			{
-				$this->load->view('accounts/insured/insured_create');
+				$this->load->view('insurant/insured/insured_create');
 			}
 			else
 			{
