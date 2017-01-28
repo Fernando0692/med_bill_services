@@ -38,7 +38,7 @@
                 <a class="collapsible-header waves-effect waves-orange"><i class="material-icons">beach_access</i>Isurant</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a href="#!" class="waves-effect">Insured</a></li>
+                        <li><a href="<?= base_url('insured'); ?>" class="waves-effect">Insured</a></li>
                         <li><a href="#!" class="waves-effect">Insurance</a></li>
                     </ul>
                 </div>

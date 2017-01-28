@@ -28,7 +28,7 @@ class patient extends CI_Controller
 			$this->form_validation->set_rules('fname', 'First Name', 'trim|required|min_length[3]|max_length[30]|xss_clean');
 			$this->form_validation->set_rules('mname', 'Middle Name', 'trim|min_length[3]|max_length[30]|xss_clean');
 			$this->form_validation->set_rules('lname', 'Last Name', 'trim|required|min_length[3]|max_length[30]|xss_clean');
-			$this->form_validation->set_rules('bdate', 'Bird Date', 'trim|required|min_length[3]|max_length[30]|xss_clean');
+			$this->form_validation->set_rules('bdate', 'Birth of Date', 'trim|required|min_length[3]|max_length[30]|xss_clean');
 			$this->form_validation->set_rules('sex', 'Sex', 'trim|required|min_length[3]|max_length[30]|xss_clean');
 			$this->form_validation->set_rules('marital_status', 'Marital Status', 'trim|min_length[3]|max_length[30]|xss_clean');
 			$this->form_validation->set_rules('phone', 'Phone', 'trim|min_length[3]|max_length[10]|xss_clean');
@@ -61,7 +61,6 @@ class patient extends CI_Controller
 					'laboral_status'=> $this->input->post('laboral_status'),
 					'related_insured'	=> $this->input->post('related_insured'),
 					'insured_ssn'	=> $this->input->post('insured_ssn'),
-					'lname'	=> $this->input->post('lname'),
 				);
 				if ($this->patient_model->insert_patient($data))
 				{
