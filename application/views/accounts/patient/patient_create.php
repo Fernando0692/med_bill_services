@@ -72,7 +72,7 @@ $this->load->view('navbar_home');
                     <?php echo form_error('phone'); ?>
                 </div>
             </div>
-            <span class="card-title">
+            <!-- <span class="card-title">
                 <h5>Address Info</h5>
             </span>
 			<div class="row margin col s12">
@@ -147,7 +147,7 @@ $this->load->view('navbar_home');
                     <input id="zip_code" name="zip_code" type="text" value="<?php echo set_value('zip_code'); ?>" />
                     <?php echo form_error('zip_code'); ?>
                 </div>
-            </div>
+            </div> -->
             <span class="card-title">
                 <h5>Insured Info</h5>
             </span>
