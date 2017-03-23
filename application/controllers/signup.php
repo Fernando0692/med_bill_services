@@ -10,7 +10,7 @@ class signup extends CI_Controller
 		$this->load->model('user_model');
 	}
 
-	function index()
+	public function index()
 	{
 		if ($this->session->userdata('id_user'))
 		{
@@ -61,5 +61,18 @@ class signup extends CI_Controller
 			redirect('home');
 
 		}
+	}
+
+	public function edit()
+	{
+		echo "hola mama";
+	}
+
+	public function delete()
+	{
+		$id = $this->uri->segment(3);
+
+			$this->session->set_flashdata('msg','<script>Materialize.toast("You are Successfully Registered! Please login to access your Profile!", 5000);</script>');
+			redirect(base_url('user'));
 	}
 }

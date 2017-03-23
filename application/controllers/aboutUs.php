@@ -19,11 +19,4 @@ class aboutUs extends CI_Controller {
 		$this->load->view('aboutUs_view', $data);
 	}
 
-	// public function show_info()
-	// {
-	// 	$data
-	// }
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */

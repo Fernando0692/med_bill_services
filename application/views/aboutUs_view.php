@@ -32,7 +32,7 @@ $this->load->view('navbar_home');
                     <li>PMB. <?php echo $r->pmb; ?></li>
                 </ul>
             </div>
-            <div class="col l3 s12">
+            <div class="col l4 s12">
                 <h5>Contact</h5>
                 <ul>
                     <li>Tel. (<?php echo $r->area; ?>) <?php echo $r->phone; ?></li>

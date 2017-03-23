@@ -30,12 +30,6 @@ $this->load->view('navbar_home');
         </a>
 		<div class="col s12 offset-s0 m12 offset-m0 card-panel">
             <table class="highlight responsive-table">
-                <ul id='options' class='dropdown-content' style="width:0.5rem">
-                    <li><a href="#!">Open</a></li>
-                    <li><a href="#!">Edit</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#!">Delete</a></li>
-                </ul>
                 <thead>
                     <tr>
                         <th data-field="id">Id</th>
@@ -47,16 +41,21 @@ $this->load->view('navbar_home');
                     </tr>
                 </thead>
                 <tbody>
-                <?php foreach($result as $r): ?>
+                    <?php foreach($result as $r): ?>
+                    <ul id='options' class='dropdown-content' style="width:0.5rem">
+                        <li><a href="<?= base_url('signup/edit')?>">Edit</a></li>
+                        <li class="divider"></li>
+                        <li><a href="<?= base_url('signup/delete/'.$r->id_user)?>">Delete</a></li>
+                    </ul>
                     <tr class='dropdown-button' data-activates="options">
-                        <td><?php echo $r->id_user; ?></td>
+                        <td><?php echo $id =  $r->id_user; ?></td>
                         <td><?php echo $r->fname; ?></td>
                         <td><?php echo $r->lname; ?></td>
                         <td><?php echo $r->email; ?></td>
                         <td><?php echo $r->profile; ?></td>
                         <td><?php echo $r->username; ?></td>
                     </tr>
-                <?php endforeach; ?>
+                    <?php endforeach;?>
                 </tbody>
             </table>
 		</div>

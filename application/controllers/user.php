@@ -10,7 +10,7 @@ class user extends CI_Controller
 		$this->load->model('user_model');
 	}
 
-	function index()
+	public function index()
 	{
 		$data['result'] = $this->user_model->get_user_info();
         $this->load->view('accounts/user/user_panel', $data);

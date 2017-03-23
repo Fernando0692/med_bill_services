@@ -56,6 +56,7 @@ $this->load->view('navbar_home');
                         <option value="Administrator">Administrator</option>
                         <option value="Medical">Medical</option>
                         <option value="Dentist">Dentist</option>
+                        <option value="User">Simple User</option>
                     </select>
                     <?php echo form_error('profile'); ?>
 				</div>
@@ -76,7 +77,7 @@ $this->load->view('navbar_home');
 				</div>
 			</div>
 			<div class="row margin right" style="padding: 0.5rem">
-				<a type="button" name="cancel" class="btn waves-effect waves-light red" href="<? echo base_url('user'); ?>">Cancel</a>
+				<a type="button" name="cancel" class="btn waves-effect waves-light red" href="<?= base_url('user'); ?>">Cancel</a>
 				<button type="submit" name="create" class="btn waves-effect waves-light blue">Create</button>
 			</div>
 			<?php
