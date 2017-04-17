@@ -1,0 +1,40 @@
+.container{
+	/*background-color: black;*/
+	color: white;
+}
+
+.row{
+	margin-bottom: 0;
+}
+.section{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.title{
+	color:black;
+}
+.gray{
+	background-color: gray;
+}
+.der{
+	background-color: black;
+}
+.headerinfo{
+	/*background-color: gray;*/
+	color:black;
+}
+.line{
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+}
+.title{
+	font-weight: bold;
+}
+.righttitle{
+	padding-top: 128px;
+}
+.patientinfo{
+	max-height: 20px;
+}

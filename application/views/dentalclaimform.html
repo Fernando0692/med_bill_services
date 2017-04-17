@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="../../css/materialize.css" media="screen,projection"/> 
+<link type="text/css" rel="stylesheet" href="../../css/style.css">
+<link type="text/css" rel="stylesheet" href="../../css/dentailclaimform.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="row title">
+			<div class="left">
+			 	<h5>ADA Amerian Dental Association Dental Claim Form.</h5>
+			</div>
+		</div>
+		
+		<div class="row">
+			<!-- #### LEFT COLUMN #### -->
+			<div class="col s6 left">
+				<!-- HEADER INFORMATION -->
+				<section class="section headerinfo">
+					<div class="row line title">Header Information</div>
+					<div class="row line">
+						<p>1. Type of Transaction (Mark all applicable boxes)</p>
+						<input type="checkbox" id="header_statement" />
+							<label for="header_statement">Statement of Actual Services.</label>
+						<input type="checkbox" id="header_predetermination" />
+							<label for="header_predetermination">Request for Predetermination/Preauthorization.</label>
+						<input type="checkbox" id="header_epsdt" />
+							<label for="header_epsdt">EPSDT/Title XIX.</label>
+					</div>
+					<div class="row line">
+						<div class="input-field">
+					          <input placeholder="" id="two_predetermination" type="text">
+					          <label for="two_predetermination">2. Predetermination/Preauthorization</label>
+					    </div>		
+					</div>					
+				</section>
+				<!-- INSURANCE COMPANY/DENTAL BENEFIT PLAN INFORMATION -->
+				<section  class="section headerinfo">
+					<div class="row line title">INSURANCE COMPANY/DENTAL BENEFIT PLAN INFORMATION</div>
+					<div class="row line">
+						<div class="input-field">
+						    <textarea id="planinformation_textarea" class="materialize-textarea"></textarea>
+						    <label for="planinformation_textarea">3. Company/Plan Name, Address, City, State, Zip Code.</label>
+			        	</div>
+			        </div>	
+				</section>
+				<!-- OTHER COVERAGE-->
+				<section  class="section headerinfo">
+					<div class="row line title">OTHER COVERAGE (Mark applicable box and complete items 5-11. If none, leave blank.)</div>
+					<!-- 4 -->
+					<div class="row line">
+						<div class="col s1">
+						4.
+						</div>
+						<div class="col s2">
+							<input type="checkbox" id="coverage_dental" />
+								<label for="coverage_dental" >Dental?</label>
+						</div>
+						<div class="col s2">
+							<input type="checkbox" id="coverage_medical" />
+								<label for="coverage_medical" >Medical?</label>
+						</div>
+						<div class="col s7"> 
+						 (If both, completes 5-11 for dental only.)
+						</div>									
+					</div>
+					<!-- 5 -->
+					<div class="row line">
+						<div class="input-field">
+							<input placeholder="" id="five_predetermination" type="text">
+					        <label for="five_predetermination">5. Name of Policyholder/Subscriber in #4(Last, First, Middle Initial, Suffix)</label>
+			        	</div>
+					</div>
+					<!-- 6-8 -->
+					<div class="row line">
+						<div class="col s4 line">
+							<div class="input-field">
+					          <input placeholder="Placeholder" id="six_coverage" type="text">
+					          <label for="six_coverage">6. Date of Birth (MM/DD/CCYY)</label>
+					        </div>
+						</div>
+						<div class="col s3">
+							<p>7. Gender</p>
+							<input type="checkbox" id="six_gender_m" />
+								<label for="six_gender_m" >M</label>
+							<input type="checkbox" id="six_gender_f" />
+								<label for="six_gender_f" >F</label>							
+						</div>
+						<div class="col s5 line">
+							<div class="input-field">
+					          <input placeholder="Placeholder" id="six_policyholder" type="text">
+					          <label for="six_policyholder">8. Policyholder/Subscriber ID(SSN or ID#)</label>
+					        </div>
+						</div>
+				    </div>
+				    <!-- 9-10 -->
+				    <div class="row line">
+				    	<div class="col s4 line">
+				    		<div class="input-field">
+					          <input placeholder="Placeholder" id="nine_coverage" type="text">
+					          <label for="nine_coverage">9. Plan/Group Number</label>
+					        </div>
+				    	</div> 
+				    	<div class="col s8">				    		
+							<p>10. Patient's Relationship to person named in #5</p>
+							<input type="checkbox" id="ten_self" />
+								<label for="ten_self" >Self</label>
+							<input type="checkbox" id="ten_spouse" />
+								<label for="ten_spouse" >Spouse</label>
+							<input type="checkbox" id="ten_dependent" />
+								<label for="ten_dependent" >Dependent</label>
+							<input type="checkbox" id="ten_other" />
+								<label for="ten_other" >Other</label>
+				    	</div>
+				    </div>
+				    <!-- 11 -->
+					<div class="row line">
+						<div class="input-field">
+						    <textarea id="eleven_coverate" class="materialize-textarea"></textarea>
+						    <label for="eleven_coverate">11. Other insurance Company/Dental Benefit Plan Name, Address, City, State, Zip Code</label>
+			        	</div>
+					</div>
+				</section>
+	      	</div> <!-- /LEFT COLUMN -->
+	      	<!-- /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ -->
+	      	<!-- /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ -->
+	      	<!-- #### RIGHT COLUMN #### -->
+	      	<div class="col s6 right ">
+	      		<!-- POLICYHOLDER/SUBSCRIBER INFORMATION -->
+	      		<section  class="section headerinfo righttitle">
+					<div class="row line title">POLICYHOLDER/SUBSCRIBER INFORMATION (For Insurance Company Named in #3)</div>
+					<!-- 12 -->
+					<div class="row line">
+						<div class="input-field">
+						    <textarea id="twelve_policyholder" class="materialize-textarea"></textarea>
+						    <label for="twelve_policyholder">12.Policyholder/Subscriber Name (Last, First, Middle Initial, Suffix), Address, City, State, Zip Code.</label>
+			        	</div>
+			        </div>
+			        <!-- 13-15 -->
+			        <div class="row line">
+						<div class="col s4 line">
+							<div class="input-field">
+					          <input placeholder="Placeholder" id="thirdteen_dob" type="text">
+					          <label for="thirdteen_dob">13. Date of Birth (MM/DD/CCYY)</label>
+					        </div>
+						</div>
+						<div class="col s3">
+							<p>14. Gender</p>
+							<input type="checkbox" id="fourteen_gender_m" />
+								<label for="fourteen_gender_m" >M</label>
+							<input type="checkbox" id="fourteen_gender_f" />
+								<label for="fourteen_gender_f" >F</label>							
+						</div>
+						<div class="col s5 line">
+							<div class="input-field">
+					          <input placeholder="Placeholder" id="fifthteen_policyholder" type="text">
+					          <label for="fifthteen_policyholder">15. Policyholder/Subscriber ID(SSN or ID#)</label>
+					        </div>
+						</div>
+				    </div>
+				    <!-- 16-17 -->
+				    <div class="row line">
+				    	<div class="col s4 line">
+				    		<div class="input-field">
+					          <input placeholder="Placeholder" id="sixteen_plangroup" type="text">
+					          <label for="sixteen_plangroup">16. Plan/Group Number</label>
+					        </div>				    		
+				    	</div>
+				    	<div class="col s8">
+				    		<div class="input-field">
+					          <input placeholder="Placeholder" id="seventeen_plangroup" type="text">
+					          <label for="seventeen_plangroup">17. Employer Name</label>
+					        </div>	
+				    	</div>
+				    </div>
+				</section>
+				<!-- PATIENT INFORMATION -->
+				<section class="section headerinfo">
+					<div class="row line title">PATIENT INFORMATION</div>
+					<!-- 18-19 -->
+					<div class="row line">				    	
+				    	<div class="col s8">				    		
+							<p>18. Relationship to Policyholder/Subscriber in #12 Above</p>
+							<input type="checkbox" id="eighteen_self" />
+								<label for="eighteen_self" >Self</label>
+							<input type="checkbox" id="eighteen_spouse" />
+								<label for="eighteen_spouse" >Spouse</label>
+							<input type="checkbox" id="eighteen_dependent" />
+								<label for="eighteen_dependent" >Dependent</label>
+							<input type="checkbox" id="eighteen_other" />
+								<label for="eighteen_other" >Other</label>
+				    	</div>
+				    	<div class="col s4 line">
+				    		<div class="input-field">
+					          <input placeholder="" id="nineteen_coverage" type="text">
+					          <label for="nineteen_coverage">19. Reserved For Future Use</label>
+					        </div>
+				    	</div> 
+				    </div>
+				    <!-- 20 -->
+				    <div class="row line">
+						<div class="input-field">
+						    <textarea id="ttee_patientinfo" class="materialize-textarea"></textarea>
+						    <label for="ttee_patientinfo">20. Name(Last, First, Middle Initial, Suffix), Addres, City, State, Zip Code</label>
+			        	</div>
+			        </div>	
+			        <!-- 21-22-23 -->
+			         <div class="row line">
+						<div class="col s4 line">
+							<div class="input-field">
+					          <input placeholder="Placeholder" id="tweentyone_dob" type="text">
+					          <label for="tweentyone_dob">21. Date of Birth (MM/DD/CCYY)</label>
+					        </div>
+						</div>
+						<div class="col s3">
+							<p>22. Gender</p>
+							<input type="checkbox" id="tweentytwo_gender_m" />
+								<label for="tweentytwo_gender_m" >M</label>
+							<input type="checkbox" id="tweentytwo_gender_f" />
+								<label for="tweentytwo_gender_f" >F</label>							
+						</div>
+						<div class="col s5 line">
+							<div class="input-field">
+					          <input placeholder="Placeholder" id="tweentythree_patientid" type="text">
+					          <label for="tweentythree_patientid">23. Patient ID/Account # (Assigned by Dentist)</label>
+					        </div>
+						</div>
+				    </div>
+				</section>
+	      	</div> <!-- /RIGHT COLUMN -->
+	    </div>	<!-- /ROW -->	    
+	</div>	<!-- /CONTAINER -->
+	<script src="../../js/jquery-2.1.4.min.js"></script>
+	<script src="../../js/materialize.min.js"></script>
+</body>
+</html>
