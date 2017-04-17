@@ -35,6 +35,12 @@
 .righttitle{
 	padding-top: 128px;
 }
+.insurancecompany{
+	max-height: 102px;
+}
 .patientinfo{
-	max-height: 20px;
+	height: 102px;
+}
+tbody td{
+	padding: 0 2px;
 }
