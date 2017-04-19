@@ -78,7 +78,7 @@
 					<div class="row line">
 						<div class="col s4 line">
 							<div class="input-field">
-					          <input placeholder="Placeholder" id="six_coverage" type="text">
+					          <input placeholder="" id="six_coverage" type="text">
 					          <label for="six_coverage">6. Date of Birth (MM/DD/CCYY)</label>
 					        </div>
 						</div>
@@ -91,7 +91,7 @@
 						</div>
 						<div class="col s5 line">
 							<div class="input-field">
-					          <input placeholder="Placeholder" id="six_policyholder" type="text">
+					          <input placeholder="" id="six_policyholder" type="text">
 					          <label for="six_policyholder">8. Policyholder/Subscriber ID(SSN or ID#)</label>
 					        </div>
 						</div>
@@ -100,7 +100,7 @@
 				    <div class="row line">
 				    	<div class="col s4 line">
 				    		<div class="input-field">
-					          <input placeholder="Placeholder" id="nine_coverage" type="text">
+					          <input placeholder="" id="nine_coverage" type="text">
 					          <label for="nine_coverage">9. Plan/Group Number</label>
 					        </div>
 				    	</div> 
@@ -142,7 +142,7 @@
 			        <div class="row line">
 						<div class="col s4 line">
 							<div class="input-field">
-					          <input placeholder="Placeholder" id="thirdteen_dob" type="text">
+					          <input placeholder="" id="thirdteen_dob" type="text">
 					          <label for="thirdteen_dob">13. Date of Birth (MM/DD/CCYY)</label>
 					        </div>
 						</div>
@@ -155,7 +155,7 @@
 						</div>
 						<div class="col s5 line">
 							<div class="input-field">
-					          <input placeholder="Placeholder" id="fifthteen_policyholder" type="text">
+					          <input placeholder="" id="fifthteen_policyholder" type="text">
 					          <label for="fifthteen_policyholder">15. Policyholder/Subscriber ID(SSN or ID#)</label>
 					        </div>
 						</div>
@@ -164,13 +164,13 @@
 				    <div class="row line">
 				    	<div class="col s4 line">
 				    		<div class="input-field">
-					          <input placeholder="Placeholder" id="sixteen_plangroup" type="text">
+					          <input placeholder="" id="sixteen_plangroup" type="text">
 					          <label for="sixteen_plangroup">16. Plan/Group Number</label>
 					        </div>				    		
 				    	</div>
 				    	<div class="col s8">
 				    		<div class="input-field">
-					          <input placeholder="Placeholder" id="seventeen_plangroup" type="text">
+					          <input placeholder="" id="seventeen_plangroup" type="text">
 					          <label for="seventeen_plangroup">17. Employer Name</label>
 					        </div>	
 				    	</div>
@@ -210,7 +210,7 @@
 			         <div class="row line">
 						<div class="col s4 line">
 							<div class="input-field">
-					          <input placeholder="Placeholder" id="tweentyone_dob" type="text">
+					          <input placeholder="" id="tweentyone_dob" type="text">
 					          <label for="tweentyone_dob">21. Date of Birth (MM/DD/CCYY)</label>
 					        </div>
 						</div>
@@ -223,7 +223,7 @@
 						</div>
 						<div class="col s5 line">
 							<div class="input-field ">
-					          <input placeholder="Placeholder" id="tweentythree_patientid" type="text">
+					          <input placeholder="" id="tweentythree_patientid" type="text">
 					          <label for="tweentythree_patientid">23. Patient ID/Account # (Assigned by Dentist)</label>
 					        </div>
 						</div>
@@ -580,10 +580,165 @@
 	    <!-- SECOND LEFT AND RIGHT COLUMNS -->
 	    <div class="row">
 	    	<!-- THE LEFT SIDE OF THE MOON -->
-	    	<div class="col s6 left">	    		
+	    	<div class="col s6 left">
+	    		<!-- AUTHORIZATIONS -->
+	    		<section class="section headerinfo">
+	    			<div class="row line title">AUTHORIZATIONS</div>
+	    			<div class="row line">
+						<p>34. I have been informed of the treatment plan and associated fees, I agree to be responsible for all
+							charges for dental services and materials not paid by my dental benefit plan, unless prohibited by
+							law, or the treating dentist or dental practice has a contractual agreement with my plan prohibiting all
+							or a portion of such charges. To the extent permitted by law, I consent to your use and disclosure of
+							my protected health information to carry out payment activities in connection with this claim.</p>
+						<div class="row">
+							<div class="col s6">
+								<input placeholder="" id="thirtysix_patient" type="text">
+								<label for="thirtysix_patient" >Patient/Guardian Signature</label>
+							</div>
+							<div class="col s6">
+								<input placeholder="" id="thirtysix_date" type="text">
+								<label for="thirtysix_date" >Date</label>
+							</div>							
+						</div>
+					</div>
+					<div class="row line">
+						<p>37. I hereby authorize and direct payment of the dental benefits otherwise payable to me, directly
+							to the below named dentist or dental entity.</p>
+						<div class="row">
+							<div class="col s6">
+								<input placeholder="" id="thirtyseven_subscriber" type="text">
+								<label for="thirtyseven_subscriber" >Subscriber Signature</label>
+							</div>
+							<div class="col s6">
+								<input placeholder="" id="thirtyseven_date" type="text">
+								<label for="thirtyseven_date" >Date</label>
+							</div>							
+						</div>
+					</div>		
+	    		</section>	    		
 	    	</div> <!-- /LeftSide -->
 	    	<!-- THE RIGHT SIDE OF THE MOON -->
-	    	<div class="col s6 right">	    		
+	    	<div class="col s6 right">
+	    		<!-- ANCILLARY CLAIM/TREATMENT INFORMATION -->
+	    		<section class="section headerinfo">
+	    			<div class="row line title">ANCILLARY CLAIM/TREATMENT INFORMATION</div>
+	    			<!-- 38-39 -->
+	    			<div class="row line">
+	    				<div class="col s9 line">
+	    					<div class="row">
+	    						<div class="col s3">
+	    							<p>38. Place of Treatment</p>
+	    						</div>
+	    						<div class="col s2">
+	    							<input placeholder="" id="thirtyeight_treatment" type="text">
+	    						</div>
+	    						<div class="col s7">
+	    							<p>(e.g. 11=Office; 22=O/P HOspital)</p>
+	    						</div>
+	    					</div>
+	    					<div class="row">
+	    						<p>(Use "PLace of Service Codes for Professional Claims")</p>
+	    					</div>
+	    				</div>
+	    				<div clas ="col s3">
+	    					<div class="row">
+	    						<p>39. Enclosures (Y or N)</p>
+	    						<input type="checkbox" id="thirtynine_enclosures" />
+	    						<label for="thirtynine_enclosures" ></label>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<!-- 40-41 -->
+	    			<div class="row line">
+	    				<div class="col s9">  					
+	    					<div class="row">
+	    						<p>40. Is Treatment for Orthondontics?</p>
+	    					</div>
+	    					<div class="row">
+	    						<div class="col s6">
+	    							<input type="checkbox" id="fourty_treatment_no" />
+	    								<label for="fourty_treatment_no">No (Skip 41-42)</label>
+	    						</div>
+	    						<div class="col s6">
+	    							<input type="checkbox" id="fourty_treatment_yes" />
+	    								<label for="fourty_treatment_yes">Yes (Complete 41-42)</label>
+	    						</div>
+	    						
+	    					</div>
+	    				</div>
+	    				<div class="col s3 line">
+	    					<div class="input-field">
+	    						<input placeholder="" id="fortyone_date" type="text">
+	    						<label for="fortyone_date">41. Date Appliance Placed (MM/DD/CCYY)</label>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<!-- 42-43-44 -->
+	    			<div class="row line">
+	    				<div class="col s3">
+	    					<div class="input-field">
+	    						<input placeholder="" id="fortytwo_months" type="text">
+	    						<label for="fortytwo_months">42. Months of Treatment Remaining</label>
+	    					</div>	    							
+	    				</div>
+	    				<div class="col s5 line">
+	    					<div class="row">
+	    						<p>43. Replacement of Prosthesis</p>
+	    					</div>			
+	    					<div class="row">
+	    						<div class="col s3">
+	    							<input type="checkbox" id="fourtythree_replacement_no" />
+	    								<label for="fourtythree_replacement_no">No</label>
+	    						</div>
+	    						<div class="col s9">
+	    							<input type="checkbox" id="fourtythree_replacement_yes" />
+	    								<label for="fourtythree_replacement_yes">Yes (Complete 44)</label>
+	    						</div>
+	    					</div>	
+	    				</div>
+	    				<div class="col s4 input-field">
+		    				<input placeholder="" id="fortytwo_months" type="text">
+		    					<label for="fortytwo_months">43. Date of Prior Placement (MM/DD/CCYY)</label>
+	    				</div>
+	    			</div>
+	    			<!-- 45 -->
+	    			<div class="row line">
+	    				<div class="col s12">
+	    					<div class="row">
+	    						<p>45. Treatment Resulting from</p>
+	    					</div>	    					
+	    				</div>
+	    				<div class="row">
+	    					<div class="col s4">
+	    						<input type="checkbox" id="fourtyfive_occupational" />
+	    							<label for="fourtyfive_occupational">Occupational illness/injury</label>    						
+	    					</div>
+	    					<div class="col s4">
+	    						<input type="checkbox" id="fourtyfive_autoaccident" />
+	    							<label for="fourtyfive_autoaccident">Auto accident</label>	    						
+	    					</div>
+	    					<div class="col s4">
+	    						<input type="checkbox" id="fourtyfive_otheraccident" />
+	    							<label for="fourtyfive_otheraccident">Other accident</label>						
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<!-- 46 -->
+	    			<div class="row line">
+	    				<div class="col s8">
+	    					<div class="input-field">
+	    						<input placeholder="" id="fortysix_dateofaccident" type="text">
+	    						<label for="fortysix_dateofaccident">46. Date of Accident (MM/DD/CCYY)</label>
+	    					</div>	 
+	    				</div>
+	    				<div class="col s4">
+	    					<div class="input-field">
+	    						<input placeholder="" id="fortysix_autoaccident" type="text">
+	    						<label for="fortysix_autoaccident">47. Auto Accident State</label>
+	    					</div>	
+	    				</div>
+	    			</div>
+	    		</section>		
 	    	</div> <!-- /RightSide -->
 	    </div>
 

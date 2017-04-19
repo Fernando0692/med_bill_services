@@ -45,3 +45,6 @@
 tbody td{
 	padding: 0 2px;
 }
+.input-field label{
+	top:2rem;
+}
