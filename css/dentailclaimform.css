@@ -1,0 +1,50 @@
+.container{
+	/*background-color: black;*/
+	color: white;
+	padding-bottom: 22px;
+}
+
+.row{
+	margin-bottom: 0;
+}
+.section{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.title{
+	color:black;
+}
+.gray{
+	background-color: gray;
+}
+.der{
+	background-color: black;
+}
+.headerinfo{
+	/*background-color: gray;*/
+	color:black;
+}
+.line{
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+}
+.title{
+	font-weight: bold;
+}
+.righttitle{
+	padding-top: 128px;
+}
+.insurancecompany{
+	max-height: 102px;
+}
+.patientinfo{
+	height: 102px;
+}
+tbody td{
+	padding: 0 2px;
+}
+.input-field label{
+	top:2rem;
+}

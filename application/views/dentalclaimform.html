@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="../../css/materialize.css" media="screen,projection"/> 
+<link type="text/css" rel="stylesheet" href="../../css/style.css">
+<link type="text/css" rel="stylesheet" href="../../css/dentailclaimform.css">
+</head>
+
+<body>
+	<div class="container">
+		 <!-- MAIN TITLE -->
+		<div class="row title">
+			<div class="left">
+			 	<h5>ADA Amerian Dental Association Dental Claim Form.</h5>
+			</div>
+		</div>
+		<!-- LEFT AND RIGHT COLUMNS -->
+		<div class="row">
+			<!-- #### LEFT COLUMN #### -->
+			<div class="col s6 left">
+				<!-- HEADER INFORMATION -->
+				<section class="section headerinfo">
+					<div class="row line title">Header Information</div>
+					<div class="row line">
+						<p>1. Type of Transaction (Mark all applicable boxes)</p>
+						<input type="checkbox" id="header_statement" />
+							<label for="header_statement">Statement of Actual Services.</label>
+						<input type="checkbox" id="header_predetermination" />
+							<label for="header_predetermination">Request for Predetermination/Preauthorization.</label>
+						<input type="checkbox" id="header_epsdt" />
+							<label for="header_epsdt">EPSDT/Title XIX.</label>
+					</div>
+					<div class="row line">
+						<div class="input-field">
+					          <input placeholder="" id="two_predetermination" type="text">
+					          <label for="two_predetermination">2. Predetermination/Preauthorization</label>
+					    </div>		
+					</div>					
+				</section>
+				<!-- INSURANCE COMPANY/DENTAL BENEFIT PLAN INFORMATION -->
+				<section  class="section headerinfo">
+					<div class="row line title">INSURANCE COMPANY/DENTAL BENEFIT PLAN INFORMATION</div>
+					<div class="row line insurancecompany">
+						<div class="input-field">
+						    <textarea id="planinformation_textarea" class="materialize-textarea"></textarea>
+						    <label for="planinformation_textarea">3. Company/Plan Name, Address, City, State, Zip Code.</label>
+			        	</div>
+			        </div>	
+				</section>
+				<!-- OTHER COVERAGE-->
+				<section  class="section headerinfo">
+					<div class="row line title">OTHER COVERAGE (Mark applicable box and complete items 5-11. If none, leave blank.)</div>
+					<!-- 4 -->
+					<div class="row line">
+						<div class="col s1">
+						4.
+						</div>
+						<div class="col s2">
+							<input type="checkbox" id="coverage_dental" />
+								<label for="coverage_dental" >Dental?</label>
+						</div>
+						<div class="col s2">
+							<input type="checkbox" id="coverage_medical" />
+								<label for="coverage_medical" >Medical?</label>
+						</div>
+						<div class="col s7"> 
+						 (If both, completes 5-11 for dental only.)
+						</div>									
+					</div>
+					<!-- 5 -->
+					<div class="row line">
+						<div class="input-field">
+							<input placeholder="" id="five_predetermination" type="text">
+					        <label for="five_predetermination">5. Name of Policyholder/Subscriber in #4(Last, First, Middle Initial, Suffix)</label>
+			        	</div>
+					</div>
+					<!-- 6-8 -->
+					<div class="row line">
+						<div class="col s4 line">
+							<div class="input-field">
+					          <input placeholder="" id="six_coverage" type="text">
+					          <label for="six_coverage">6. Date of Birth (MM/DD/CCYY)</label>
+					        </div>
+						</div>
+						<div class="col s3">
+							<p>7. Gender</p>
+							<input type="checkbox" id="six_gender_m" />
+								<label for="six_gender_m" >M</label>
+							<input type="checkbox" id="six_gender_f" />
+								<label for="six_gender_f" >F</label>							
+						</div>
+						<div class="col s5 line">
+							<div class="input-field">
+					          <input placeholder="" id="six_policyholder" type="text">
+					          <label for="six_policyholder">8. Policyholder/Subscriber ID(SSN or ID#)</label>
+					        </div>
+						</div>
+				    </div>
+				    <!-- 9-10 -->
+				    <div class="row line">
+				    	<div class="col s4 line">
+				    		<div class="input-field">
+					          <input placeholder="" id="nine_coverage" type="text">
+					          <label for="nine_coverage">9. Plan/Group Number</label>
+					        </div>
+				    	</div> 
+				    	<div class="col s8">				    		
+							<p>10. Patient's Relationship to person named in #5</p>
+							<input type="checkbox" id="ten_self" />
+								<label for="ten_self" >Self</label>
+							<input type="checkbox" id="ten_spouse" />
+								<label for="ten_spouse" >Spouse</label>
+							<input type="checkbox" id="ten_dependent" />
+								<label for="ten_dependent" >Dependent</label>
+							<input type="checkbox" id="ten_other" />
+								<label for="ten_other" >Other</label>
+				    	</div>
+				    </div>
+				    <!-- 11 -->
+					<div class="row line">
+						<div class="input-field">
+						    <textarea id="eleven_coverate" class="materialize-textarea"></textarea>
+						    <label for="eleven_coverate">11. Other insurance Company/Dental Benefit Plan Name, Address, City, State, Zip Code</label>
+			        	</div>
+					</div>
+				</section>
+	      	</div> <!-- /LEFT COLUMN -->
+	      	<!-- /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ -->
+	      	<!-- #### RIGHT COLUMN #### -->
+	      	<div class="col s6 right">
+	      		<!-- POLICYHOLDER/SUBSCRIBER INFORMATION -->
+	      		<section  class="section headerinfo righttitle">
+					<div class="row line title">POLICYHOLDER/SUBSCRIBER INFORMATION (For Insurance Company Named in #3)</div>
+					<!-- 12 -->
+					<div class="row line">
+						<div class="input-field">
+						    <textarea id="twelve_policyholder" class="materialize-textarea"></textarea>
+						    <label for="twelve_policyholder">12.Policyholder/Subscriber Name (Last, First, Middle Initial, Suffix), Address, City, State, Zip Code.</label>
+			        	</div>
+			        </div>
+			        <!-- 13-15 -->
+			        <div class="row line">
+						<div class="col s4 line">
+							<div class="input-field">
+					          <input placeholder="" id="thirdteen_dob" type="text">
+					          <label for="thirdteen_dob">13. Date of Birth (MM/DD/CCYY)</label>
+					        </div>
+						</div>
+						<div class="col s3">
+							<p>14. Gender</p>
+							<input type="checkbox" id="fourteen_gender_m" />
+								<label for="fourteen_gender_m" >M</label>
+							<input type="checkbox" id="fourteen_gender_f" />
+								<label for="fourteen_gender_f" >F</label>							
+						</div>
+						<div class="col s5 line">
+							<div class="input-field">
+					          <input placeholder="" id="fifthteen_policyholder" type="text">
+					          <label for="fifthteen_policyholder">15. Policyholder/Subscriber ID(SSN or ID#)</label>
+					        </div>
+						</div>
+				    </div>
+				    <!-- 16-17 -->
+				    <div class="row line">
+				    	<div class="col s4 line">
+				    		<div class="input-field">
+					          <input placeholder="" id="sixteen_plangroup" type="text">
+					          <label for="sixteen_plangroup">16. Plan/Group Number</label>
+					        </div>				    		
+				    	</div>
+				    	<div class="col s8">
+				    		<div class="input-field">
+					          <input placeholder="" id="seventeen_plangroup" type="text">
+					          <label for="seventeen_plangroup">17. Employer Name</label>
+					        </div>	
+				    	</div>
+				    </div>
+				</section>
+				<!-- PATIENT INFORMATION -->
+				<section class="section headerinfo">
+					<div class="row line title">PATIENT INFORMATION</div>
+					<!-- 18-19 -->
+					<div class="row line">				    	
+				    	<div class="col s8">				    		
+							<p>18. Relationship to Policyholder/Subscriber in #12 Above</p>
+							<input type="checkbox" id="eighteen_self" />
+								<label for="eighteen_self" >Self</label>
+							<input type="checkbox" id="eighteen_spouse" />
+								<label for="eighteen_spouse" >Spouse</label>
+							<input type="checkbox" id="eighteen_dependent" />
+								<label for="eighteen_dependent" >Dependent</label>
+							<input type="checkbox" id="eighteen_other" />
+								<label for="eighteen_other" >Other</label>
+				    	</div>
+				    	<div class="col s4 line">
+				    		<div class="input-field">
+					          <input placeholder="" id="nineteen_coverage" type="text">
+					          <label for="nineteen_coverage">19. Reserved For Future Use</label>
+					        </div>
+				    	</div> 
+				    </div>
+				    <!-- 20 -->
+				    <div class="row line">
+						<div class="input-field">
+						    <textarea id="ttee_patientinfo" class="materialize-textarea"></textarea>
+						    <label for="ttee_patientinfo">20. Name(Last, First, Middle Initial, Suffix), Addres, City, State, Zip Code</label>
+			        	</div>
+			        </div>	
+			        <!-- 21-22-23 -->
+			         <div class="row line">
+						<div class="col s4 line">
+							<div class="input-field">
+					          <input placeholder="" id="tweentyone_dob" type="text">
+					          <label for="tweentyone_dob">21. Date of Birth (MM/DD/CCYY)</label>
+					        </div>
+						</div>
+						<div class="col s3">
+							<p>22. Gender</p>
+							<input type="checkbox" id="tweentytwo_gender_m" />
+								<label for="tweentytwo_gender_m" >M</label>
+							<input type="checkbox" id="tweentytwo_gender_f" />
+								<label for="tweentytwo_gender_f" >F</label>							
+						</div>
+						<div class="col s5 line">
+							<div class="input-field ">
+					          <input placeholder="" id="tweentythree_patientid" type="text">
+					          <label for="tweentythree_patientid">23. Patient ID/Account # (Assigned by Dentist)</label>
+					        </div>
+						</div>
+				    </div>
+				</section>
+	      	</div> <!-- /RIGHT COLUMN -->	      	
+	    </div>	<!-- /ROW -->
+
+	    <!-- #### CENTER TABLE #### -->
+	    <div class="row line">
+	    	<div class="col s12">
+	      		<!-- RECORD OF SERVICES PROVIDED -->
+	      		<section class="section headerinfo">
+					<div class="row line title">RECORD OF SERVICES PROVIDED</div>
+					<!-- Table -->
+					<table class="bordered centered striped recordtable responsive-table">
+				    	<thead>
+				          <tr>
+				              <th></th>
+				              <th>24. Procedure Date (MM/DD/CCYY)</th>
+				              <th>25. Area of Oral Cavity</th>
+				              <th>26. Tooth System</th>
+				              <th>27. Tooth Number(s) or Letter(s)</th>
+				              <th>28. Tooth Surface</th>
+				              <th>29. Procedure Code</th>
+				              <th>29a. Diag. Pointer</th>
+				              <th>29b. Qty.</th>
+				              <th>30. Description</th>
+				              <th>31. Fee</th>
+				          </tr>
+				        </thead>
+				        <tbody>
+				        	<!-- 1 -->
+				          <tr>
+				          	<td>1</td>
+				            <td>
+				            	<div class="input-field">
+						          <input placeholder="" id="one_24" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="one_25" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="one_26" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="one_27" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="one_28" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="one_29" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="one_29a" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="one_29b" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="one_30" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="one_31" type="text">						         
+					    		</div>		 
+					    	</td>
+				          </tr>
+				          <!-- 2 -->
+				          <tr>
+				          	<td>2</td>
+				            <td>
+				            	<div class="input-field">
+						          <input placeholder="" id="two_24" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="two_25" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="two_26" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="two_27" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="two_28" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="two_29" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="two_29a" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="two_29b" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="two_30" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="two_31" type="text">						         
+					    		</div>		 
+					    	</td>
+				          </tr>	
+				          <!-- 3 -->
+				           <tr>
+				          	<td>3</td>
+				            <td>
+				            	<div class="input-field">
+						          <input placeholder="" id="three_24" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="three_25" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="three_26" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="three_27" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="three_28" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="three_29" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="three_29a" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="three_29b" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="three_30" type="text">						         
+					    		</div>		 
+					    	</td>
+					    	<td>
+				            	<div class="input-field">
+						          <input placeholder="" id="three_31" type="text">						         
+					    		</div>		 
+					    	</td>
+				          </tr>	
+				        </tbody>
+	     			</table>
+				</section>
+	      	</div>
+	    </div>
+	     <!-- #### TOOTH #### -->
+	    <div class="row headerinfo">
+	    		<!-- 33-34-34a -->
+				<div class="col s9 line">
+					<div class="row">
+						<div class="col s12">
+							<div class="row line title">33. Missing Teeth Information (Select each missing tooth.)</div>
+						</div>
+						<!-- TOOTHS -->
+						<div class="col s12">
+							<input type="checkbox" id="tooth_1" />
+								<label for="tooth_1" >1</label>
+							<input type="checkbox" id="tooth_2" />
+								<label for="tooth_2" >2</label>
+							<input type="checkbox" id="tooth_3" />
+								<label for="tooth_3" >3</label>
+							<input type="checkbox" id="tooth_4" />
+								<label for="tooth_4" >4</label>
+							<input type="checkbox" id="tooth_5" />
+								<label for="tooth_5" >5</label>
+							<input type="checkbox" id="tooth_6" />
+								<label for="tooth_6" >6</label>
+							<input type="checkbox" id="tooth_7" />
+								<label for="tooth_7" >7</label>
+							<input type="checkbox" id="tooth_8" />
+								<label for="tooth_8" >8</label>
+							<input type="checkbox" id="tooth_9" />
+								<label for="tooth_9" >9</label>
+							<input type="checkbox" id="tooth_10" />
+								<label for="tooth_10" >10</label>
+							<input type="checkbox" id="tooth_11" />
+								<label for="tooth_11" >11</label>
+							<input type="checkbox" id="tooth_12" />
+								<label for="tooth_12" >12</label>
+							<input type="checkbox" id="tooth_13" />
+								<label for="tooth_13" >13</label>								
+							<input type="checkbox" id="tooth_14" />
+								<label for="tooth_14" >14</label>
+							<input type="checkbox" id="tooth_15" />
+								<label for="tooth_15" >15</label>
+							<input type="checkbox" id="tooth_16" />
+								<label for="tooth_16" >16</label>
+							<!-- Second line of tooths -->	
+							<input type="checkbox" id="tooth_32" />
+								<label for="tooth_32" >32</label>
+							<input type="checkbox" id="tooth_31" />
+								<label for="tooth_31" >31</label>
+							<input type="checkbox" id="tooth_30" />
+								<label for="tooth_30" >30</label>
+							<input type="checkbox" id="tooth_29" />
+								<label for="tooth_29" >29</label>
+							<input type="checkbox" id="tooth_28" />
+								<label for="tooth_28" >28</label>
+							<input type="checkbox" id="tooth_27" />
+								<label for="tooth_27" >27</label>
+							<input type="checkbox" id="tooth_26" />
+								<label for="tooth_26" >26</label>
+							<input type="checkbox" id="tooth_25" />
+								<label for="tooth_25" >25</label>
+							<input type="checkbox" id="tooth_24" />
+								<label for="tooth_24" >24</label>
+							<input type="checkbox" id="tooth_23" />
+								<label for="tooth_23" >23</label>
+							<input type="checkbox" id="tooth_22" />
+								<label for="tooth_22" >22</label>
+							<input type="checkbox" id="tooth_21" />
+								<label for="tooth_21" >21</label>								
+							<input type="checkbox" id="tooth_20" />
+								<label for="tooth_20" >20</label>
+							<input type="checkbox" id="tooth_19" />
+								<label for="tooth_19" >19</label>
+							<input type="checkbox" id="tooth_18" />
+								<label for="tooth_18" >18</label>
+							<input type="checkbox" id="tooth_17" />
+								<label for="tooth_17" >17</label>
+						</div> 
+						<!-- Diagnosis Code List Qualifier -->
+						<div class="col s12">
+							<div class="row line">
+								<div class="col s4">
+									<p>34. Diagnosis Code List Qualifier</p>									
+								</div>
+								<div class="col s2">
+									<input placeholder="" id="thirtyfour_dclq_one" type="text">
+								</div> <!-- col s8 -->
+								<div class="col s2">
+									<input placeholder="" id="thirtyfour_dclq_two" type="text">
+								</div>
+								<div class="col s4">
+									<p>(ICD-9 = B; ICD-10=AB)</p>
+								</div>
+							</div>	<!-- ROW -->						
+						</div>	<!-- COL S12 -->	
+						<!-- Diagnosis Code -->
+						<div class="col s12">
+							<div class="row line">
+								<div class="col s4">
+									<p>34a. Diagnosis Code(s)</p>
+									<p>(Primary Diagnosis in "A")</p>
+								</div>
+								<div class="col s4">
+									<div class="row input-field">
+										<input placeholder="" id="thirtyfoura_dclq_a" type="text">
+									 		<label for="thirtyfoura_dclq_a">A</label>
+									</div>
+									<div class="row input-field">
+										<input placeholder="" id="thirtyfoura_dclq_b" type="text">
+									 		<label for="thirtyfoura_dclq_b">B</label>
+									</div>
+									
+								</div>
+								<div class="col s4">
+									<div class="row input-field ">
+										<input placeholder="" id="thirtyfoura_dclq_c" type="text">
+									 		<label for="thirtyfoura_dclq_c">C</label>
+									</div>
+									<div class="row input-field">
+										<input placeholder="" id="thirtyfoura_dclq_c" type="text">
+									 		<label for="thirtyfoura_dclq_c">D</label>
+									</div>									
+								</div>
+
+							</div>
+						</div>				
+					</div>
+				</div> <!-- /Inputs -->
+				<!-- OTHER AND TOTAL FEES -->
+				<div class="col s3 line">
+					<div class="row">
+						<div class="col s6">
+							<p>31a. Other</p>
+							<p>Fee(s).</p>
+						</div>
+						<div class="col s6 input-field">
+					          <input placeholder="" id="thirtyone_other_fee" type="text">
+					          <input placeholder="" id="thirtyone_other_fee_two" type="text">
+						</div>
+					</div>
+					<div class="row line">
+						<div class="col s6">
+							<p>32. Total Fee</p>
+						</div>
+						<div class="col s6 input-field">
+					          <input placeholder="" id="thirtytwo_total_fee" type="text">
+						</div>
+					</div>
+				</div>
+				<div class="col s12 line">
+					<div class="input-field">
+						<input placeholder="" id="thirtyfive_remarks" type="text">
+						<label for="thirtyfive_remarks" >35. Remarks</label>
+					</div>					
+				</div>    	
+	    </div>
+	    <!-- SECOND LEFT AND RIGHT COLUMNS -->
+	    <div class="row">
+	    	<!-- THE LEFT SIDE OF THE MOON -->
+	    	<div class="col s6 left">
+	    		<!-- AUTHORIZATIONS -->
+	    		<section class="section headerinfo">
+	    			<div class="row line title">AUTHORIZATIONS</div>
+	    			<div class="row line">
+						<p>34. I have been informed of the treatment plan and associated fees, I agree to be responsible for all
+							charges for dental services and materials not paid by my dental benefit plan, unless prohibited by
+							law, or the treating dentist or dental practice has a contractual agreement with my plan prohibiting all
+							or a portion of such charges. To the extent permitted by law, I consent to your use and disclosure of
+							my protected health information to carry out payment activities in connection with this claim.</p>
+						<div class="row">
+							<div class="col s6">
+								<input placeholder="" id="thirtysix_patient" type="text">
+								<label for="thirtysix_patient" >Patient/Guardian Signature</label>
+							</div>
+							<div class="col s6">
+								<input placeholder="" id="thirtysix_date" type="text">
+								<label for="thirtysix_date" >Date</label>
+							</div>							
+						</div>
+					</div>
+					<div class="row line">
+						<p>37. I hereby authorize and direct payment of the dental benefits otherwise payable to me, directly
+							to the below named dentist or dental entity.</p>
+						<div class="row">
+							<div class="col s6">
+								<input placeholder="" id="thirtyseven_subscriber" type="text">
+								<label for="thirtyseven_subscriber" >Subscriber Signature</label>
+							</div>
+							<div class="col s6">
+								<input placeholder="" id="thirtyseven_date" type="text">
+								<label for="thirtyseven_date" >Date</label>
+							</div>							
+						</div>
+					</div>		
+	    		</section>	    		
+	    	</div> <!-- /LeftSide -->
+	    	<!-- THE RIGHT SIDE OF THE MOON -->
+	    	<div class="col s6 right">
+	    		<!-- ANCILLARY CLAIM/TREATMENT INFORMATION -->
+	    		<section class="section headerinfo">
+	    			<div class="row line title">ANCILLARY CLAIM/TREATMENT INFORMATION</div>
+	    			<!-- 38-39 -->
+	    			<div class="row line">
+	    				<div class="col s9 line">
+	    					<div class="row">
+	    						<div class="col s3">
+	    							<p>38. Place of Treatment</p>
+	    						</div>
+	    						<div class="col s2">
+	    							<input placeholder="" id="thirtyeight_treatment" type="text">
+	    						</div>
+	    						<div class="col s7">
+	    							<p>(e.g. 11=Office; 22=O/P HOspital)</p>
+	    						</div>
+	    					</div>
+	    					<div class="row">
+	    						<p>(Use "PLace of Service Codes for Professional Claims")</p>
+	    					</div>
+	    				</div>
+	    				<div clas ="col s3">
+	    					<div class="row">
+	    						<p>39. Enclosures (Y or N)</p>
+	    						<input type="checkbox" id="thirtynine_enclosures" />
+	    						<label for="thirtynine_enclosures" ></label>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<!-- 40-41 -->
+	    			<div class="row line">
+	    				<div class="col s9">  					
+	    					<div class="row">
+	    						<p>40. Is Treatment for Orthondontics?</p>
+	    					</div>
+	    					<div class="row">
+	    						<div class="col s6">
+	    							<input type="checkbox" id="fourty_treatment_no" />
+	    								<label for="fourty_treatment_no">No (Skip 41-42)</label>
+	    						</div>
+	    						<div class="col s6">
+	    							<input type="checkbox" id="fourty_treatment_yes" />
+	    								<label for="fourty_treatment_yes">Yes (Complete 41-42)</label>
+	    						</div>
+	    						
+	    					</div>
+	    				</div>
+	    				<div class="col s3 line">
+	    					<div class="input-field">
+	    						<input placeholder="" id="fortyone_date" type="text">
+	    						<label for="fortyone_date">41. Date Appliance Placed (MM/DD/CCYY)</label>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<!-- 42-43-44 -->
+	    			<div class="row line">
+	    				<div class="col s3">
+	    					<div class="input-field">
+	    						<input placeholder="" id="fortytwo_months" type="text">
+	    						<label for="fortytwo_months">42. Months of Treatment Remaining</label>
+	    					</div>	    							
+	    				</div>
+	    				<div class="col s5 line">
+	    					<div class="row">
+	    						<p>43. Replacement of Prosthesis</p>
+	    					</div>			
+	    					<div class="row">
+	    						<div class="col s3">
+	    							<input type="checkbox" id="fourtythree_replacement_no" />
+	    								<label for="fourtythree_replacement_no">No</label>
+	    						</div>
+	    						<div class="col s9">
+	    							<input type="checkbox" id="fourtythree_replacement_yes" />
+	    								<label for="fourtythree_replacement_yes">Yes (Complete 44)</label>
+	    						</div>
+	    					</div>	
+	    				</div>
+	    				<div class="col s4 input-field">
+		    				<input placeholder="" id="fortytwo_months" type="text">
+		    					<label for="fortytwo_months">43. Date of Prior Placement (MM/DD/CCYY)</label>
+	    				</div>
+	    			</div>
+	    			<!-- 45 -->
+	    			<div class="row line">
+	    				<div class="col s12">
+	    					<div class="row">
+	    						<p>45. Treatment Resulting from</p>
+	    					</div>	    					
+	    				</div>
+	    				<div class="row">
+	    					<div class="col s4">
+	    						<input type="checkbox" id="fourtyfive_occupational" />
+	    							<label for="fourtyfive_occupational">Occupational illness/injury</label>    						
+	    					</div>
+	    					<div class="col s4">
+	    						<input type="checkbox" id="fourtyfive_autoaccident" />
+	    							<label for="fourtyfive_autoaccident">Auto accident</label>	    						
+	    					</div>
+	    					<div class="col s4">
+	    						<input type="checkbox" id="fourtyfive_otheraccident" />
+	    							<label for="fourtyfive_otheraccident">Other accident</label>						
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<!-- 46 -->
+	    			<div class="row line">
+	    				<div class="col s8">
+	    					<div class="input-field">
+	    						<input placeholder="" id="fortysix_dateofaccident" type="text">
+	    						<label for="fortysix_dateofaccident">46. Date of Accident (MM/DD/CCYY)</label>
+	    					</div>	 
+	    				</div>
+	    				<div class="col s4">
+	    					<div class="input-field">
+	    						<input placeholder="" id="fortysix_autoaccident" type="text">
+	    						<label for="fortysix_autoaccident">47. Auto Accident State</label>
+	    					</div>	
+	    				</div>
+	    			</div>
+	    		</section>		
+	    	</div> <!-- /RightSide -->
+	    </div>
+
+	</div>	<!-- /CONTAINER -->
+	<script src="../../js/jquery-2.1.4.min.js"></script>
+	<script src="../../js/materialize.min.js"></script>
+</body>
+</html>
