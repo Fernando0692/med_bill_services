@@ -22,7 +22,7 @@ $this->load->view('navbar_home');
 		</div>
 	</div>
 	<div class="row margin">
-        <a type="button" class="btn right waves-effect waves-light" href="<?php echo base_url('signup'); ?>">
+        <a type="button" class="btn right waves-effect waves-light" href="<?php echo base_url('user/create'); ?>">
             <i class="large material-icons">add</i>
         </a>
         <a type="button" class="btn right waves-effect waves-light" style="margin-right: 1rem" href="#print">
@@ -43,9 +43,9 @@ $this->load->view('navbar_home');
                 <tbody>
                     <?php foreach($result as $r): ?>
                     <ul id='options' class='dropdown-content' style="width:0.5rem">
-                        <li><a href="<?= base_url('signup/edit')?>">Edit</a></li>
+                        <li><a href="<?= base_url('user/edit')?>">Edit</a></li>
                         <li class="divider"></li>
-                        <li><a href="<?= base_url('signup/delete/'.$r->id_user)?>">Delete</a></li>
+                        <li><a href="<?= base_url('user/delete/'.$r->id_user)?>">Delete</a></li>
                     </ul>
                     <tr class='dropdown-button' data-activates="options">
                         <td><?php echo $id =  $r->id_user; ?></td>
