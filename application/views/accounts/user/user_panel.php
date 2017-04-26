@@ -42,10 +42,35 @@ $this->load->view('navbar_home');
                 </thead>
                 <tbody>
                     <?php foreach($result as $r): ?>
-                    <ul id='options' class='dropdown-content' style="width:0.5rem">
+                    <!-- DELETE MODAL -->
+                    <div id="deleteModal" class="modal">
+                        <div class="modal-content">
+                            <h4 class="red-text">Atention!</h4>
+                            <p>This item has been deleted. Are you sure you want to delete it?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="<?= base_url('user/delete/'.$r->id_user)?>" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">Disagree</a>
+                        </div>
+                    </div>
+                    <!-- EDIT MODAL -->
+                    <!--
+                    <div id="deleteModal" class="modal">
+                        <div class="modal-content">
+                            <h4 class="red-text">Atention!</h4>
+                            <p>This item has been deleted. Are you sure you want to delete it?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="<?= base_url('user/delete/'.$r->id_user)?>" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Disagree</a>
+                        </div>
+                    </div>
+                    -->
+
+                    <ul id='options' class='dropdown-content'>
                         <li><a href="<?= base_url('user/edit')?>">Edit</a></li>
                         <li class="divider"></li>
-                        <li><a href="<?= base_url('user/delete/'.$r->id_user)?>">Delete</a></li>
+                        <li><a href="#deleteModal" class="modal-trigger">Delete</a></li>
                     </ul>
                     <tr class='dropdown-button' data-activates="options">
                         <td><?php echo $id =  $r->id_user; ?></td>

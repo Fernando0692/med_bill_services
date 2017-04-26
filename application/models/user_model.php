@@ -3,12 +3,12 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class user_model extends CI_Model
 {
-	function __construct()
+	public function __construct()
     {
         parent::__construct();
     }
 
-	function get_user($username, $pwd)
+	public function get_user($username, $pwd)
 	{
 		$this->db->where('username', $username);
 		$this->db->where('password', $pwd);
@@ -16,21 +16,14 @@ class user_model extends CI_Model
 		return $query->result();
 	}
 
-	// get user
-	function get_user_by_id($id)
+	public function get_user_by_id($id)
 	{
 		$this->db->where('id_user', $id);
         $query = $this->db->get('user');
 		return $query->result();
 	}
 
-	// insert
-	function insert_user($data)
-    {
-		return $this->db->insert('user', $data);
-	}
-
-	function get_user_info()
+	public function get_user_info()
 	{
 		$this->db->select('*');
 		$query = $this->db->get('user');
@@ -40,7 +33,18 @@ class user_model extends CI_Model
 		}
 	}
 
-	function delete_user($id)
+	public function insert_user($data)
+	{
+		return $this->db->insert('user', $data);
+	}
+
+	public function update_user($id)
+	{
+		$this->db->where('id_user', $id);
+		return $this->db->insert('user', $data);
+	}
+
+	public function delete_user($id)
 	{
 		$this->db->where('id_user', $id);
 		return $this->db->delete('user');

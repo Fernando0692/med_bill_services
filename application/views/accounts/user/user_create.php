@@ -22,7 +22,7 @@ $this->load->view('navbar_home');
             $attributes = array(
                 'name' => "createForm"
             );
-            echo form_open('create', $attributes);
+            echo form_open('user/create', $attributes);
             ?>
             <div class="row margin">
                 <div class="input-field col s6 offset-s4">

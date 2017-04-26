@@ -40,7 +40,7 @@ class user extends CI_Controller
 			// submit
 			if ($this->form_validation->run() == FALSE)
 			{
-				$this->load->view('signup_view');
+				$this->load->view('accounts/user/user_create');
 			}
 			else
 			{
@@ -56,14 +56,14 @@ class user extends CI_Controller
 
 				if ($this->user_model->insert_user($data))
 				{
+					redirect('user');
 					$this->session->set_flashdata('msg','<script>Materialize.toast("You are Successfully Registered! Please login to access your Profile!", 5000);</script>');
-					redirect('user/create');
 				}
 				else
 				{
 					// error
 					$this->session->set_flashdata('msg','<script>Materialize.toast("Oops! Error.  Please try again later!!!", 5000);</script>');
-					redirect('user/create');
+					redirect('user');
 				}
 			}
 		}
@@ -78,6 +78,15 @@ class user extends CI_Controller
 	public function edit()
 	{
 		//This for User edition
+		if ($this->session->userdata('id_user'))
+		{
+			echo "hola";
+		}
+		else
+		{
+			$data['user'] = $this->user_model->get_user_by_id($this->session->userdata('id_user'));
+			redirect('home');
+		}
 	}
 
 	public function delete()
@@ -90,18 +99,9 @@ class user extends CI_Controller
 			{
 				show_404();
 			}
-
-			if ($id != '') {
-				# code...
-				$user_item = $this->user_model->get_user_by_id($id);
-				$this->user_model->delete_user($id);
-				redirect( 'user');
-			} else {
-				# code...
-			}
-
-
-
+			$user_item = $this->user_model->get_user_by_id($id);
+			$this->user_model->delete_user($id);
+			redirect( 'user');
 		}
 		else
 		{
