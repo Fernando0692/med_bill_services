@@ -56,8 +56,8 @@ class user extends CI_Controller
 
 				if ($this->user_model->insert_user($data))
 				{
-					redirect('user');
 					$this->session->set_flashdata('msg','<script>Materialize.toast("You are Successfully Registered! Please login to access your Profile!", 5000);</script>');
+					redirect('user');
 				}
 				else
 				{
@@ -80,7 +80,51 @@ class user extends CI_Controller
 		//This for User edition
 		if ($this->session->userdata('id_user'))
 		{
-			echo "hola";
+			// $this->load->helper('form');
+			// $this->load->library('form_validation');
+
+			$id = $this->uri->segment(3);
+			if (empty($id))
+			{
+				show_404();
+			}
+			$this->form_validation->set_rules('fname', 'First Name', 'trim|min_length[3]|max_length[30]|xss_clean');
+			$this->form_validation->set_rules('lname', 'Last Name', 'trim|min_length[3]|max_length[30]|xss_clean');
+			$this->form_validation->set_rules('email', 'Email', 'trim|valid_email');
+			$this->form_validation->set_rules('profile', 'Profile', 'trim|xss_clean');
+			$this->form_validation->set_rules('username', 'Username', 'trim');
+			$this->form_validation->set_rules('password', 'Password', 'trim|matches[cpassword]');
+			$this->form_validation->set_rules('cpassword', 'Confirm Password', 'trim');
+
+			$data['user_info'] = $this->user_model->get_user_by_id($id);
+			if ($this->form_validation->run() == FALSE)
+			{
+				$this->load->view('accounts/user/user_edit',$data);
+			}
+			else
+			{
+				//insert user details into db
+				$data = array(
+					'fname' => $this->input->post('fname'),
+					'lname' => $this->input->post('lname'),
+					'email' => $this->input->post('email'),
+					'profile' => $this->input->post('profile'),
+					'username' => $this->input->post('username'),
+					'password' => $this->input->post('password')
+				);
+
+				if ($this->user_model->update_user($data, $id))
+				{
+					$this->session->set_flashdata('msg','<script>Materialize.toast("You are Successfully Updated!", 5000);</script>');
+					redirect('user/edit/'.$id);
+				}
+				else
+				{
+					// error
+					$this->session->set_flashdata('msg','<script>Materialize.toast("Oops! Error.  Please try again later!!!", 5000);</script>');
+					redirect('user');
+				}
+			}
 		}
 		else
 		{
@@ -99,7 +143,7 @@ class user extends CI_Controller
 			{
 				show_404();
 			}
-			$user_item = $this->user_model->get_user_by_id($id);
+			// $user_item = $this->user_model->get_user_by_id($id);
 			$this->user_model->delete_user($id);
 			redirect( 'user');
 		}

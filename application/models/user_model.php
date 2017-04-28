@@ -38,10 +38,10 @@ class user_model extends CI_Model
 		return $this->db->insert('user', $data);
 	}
 
-	public function update_user($id)
+	public function update_user($data, $id)
 	{
 		$this->db->where('id_user', $id);
-		return $this->db->insert('user', $data);
+		return $this->db->update('user', $data);
 	}
 
 	public function delete_user($id)

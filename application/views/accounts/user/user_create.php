@@ -24,7 +24,7 @@ $this->load->view('navbar_home');
             );
             echo form_open('user/create', $attributes);
             ?>
-            <div class="row margin">
+            <!-- <div class="row margin">
                 <div class="input-field col s6 offset-s4">
                     <div class="file-field input-field">
                         <div class="btn">
@@ -33,7 +33,7 @@ $this->load->view('navbar_home');
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 			<div class="row margin">
 				<div class="input-field col s5 offset-s1">
                     <label for="fname">Name(s)</label>
